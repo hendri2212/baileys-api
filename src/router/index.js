@@ -47,7 +47,7 @@ router.use((req, res, next) => {
     const base64 = authorization.split(' ')[1]
     const parsedWord = CryptoJS.enc.Base64.parse(base64)
     const parsedStr = parsedWord.toString(CryptoJS.enc.Utf8)
-    const check = parsedStr.substring(0, parsedStr.length - 1)
+    const check = authorization
     const status = check === validation
 
     if (!status) {
