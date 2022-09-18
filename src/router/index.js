@@ -44,9 +44,9 @@ router.use((req, res, next) => {
         return res.status(403).end('403 - Unauthorized')
     }
 
-    const base64 = authorization.split(' ')[1]
-    const parsedWord = CryptoJS.enc.Base64.parse(base64)
-    const parsedStr = parsedWord.toString(CryptoJS.enc.Utf8)
+//     const base64 = authorization.split(' ')[1]
+//     const parsedWord = CryptoJS.enc.Base64.parse(base64)
+//     const parsedStr = parsedWord.toString(CryptoJS.enc.Utf8)
     const check = authorization
     const status = check === validation
 
